@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#full-width-slider {
+   width: 100%;
+   color: #000;
+}
+
+.image-layer {
+   position: absolute;
+   overflow: hidden;
+}
+
+.infoBlock {
+   position: absolute;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+}
+
+.fullWidth {
+   max-width: 2000px;
+   margin: 0 auto;
+}
+
+.slider-wrapper {
+   position: relative;
+   /*min-height:460px;*/
+}
+
+.rsImg {
+   animation: scale 3s;
+   -moz-animation: scale 3s;
+   -webkit-animation: scale 3s;
+   -ms-animation: scale 3s;
+   -o-animation: scale 3s;
+   margin-top: -20px;
+}
+
+@keyframes scale {
+   from {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+
+   to {
+      -webkit-transform: scale(1.0);
+      -moz-transform: scale(1.0);
+      -o-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      transform: scale(1.0);
+   }
+}
+
+@-moz-keyframes scale {
+   from {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+
+   to {
+      -webkit-transform: scale(1.0);
+      -moz-transform: scale(1.0);
+      -o-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      transform: scale(1.0);
+   }
+}
+
+@-webkit-keyframes scale {
+   from {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+
+   to {
+      -webkit-transform: scale(1.0);
+      -moz-transform: scale(1.0);
+      -o-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      transform: scale(1.0);
+   }
+}
+
+@-o-keyframes scale {
+   from {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+
+   to {
+      -webkit-transform: scale(1.0);
+      -moz-transform: scale(1.0);
+      -o-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      transform: scale(1.0);
+   }
+}
+
+.heroSlider .rsOverflow,
+.royalSlider.heroSlider {
+   height: 600px !important;
+}
+
+@media screen and (max-width:1400px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {
+      height: 460px !important;
+   }
+}
+
+@media screen and (max-width:1024px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {}
+
+   img.rsImg {
+      /*width:160% !important;
+	  height:auto !important;*/
+   }
+
+   .rsABlock {
+      /*width:35% !important;*/
+   }
+
+   img.banner3.rsABlock {
+      /*width:20% !important;*/
+      /*top:55% !important;*/
+   }
+}
+
+@media screen and (max-width:800px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {
+      height: 340px !important;
+   }
+}
+
+@media screen and (max-width:600px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {}
+}
+
+@media screen and (max-width:550px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {
+      height: 270px !important;
+   }
+}
+
+@media screen and (max-width:400px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {
+      height: 240px !important;
+   }
+}
+
+@media screen and (max-height:650px) {
+   /* img.rsABlock{
+	  width:30% !important;
+	  top:45% !important;
+  }
+  img.banner3.rsABlock{
+	  width:20% !important;
+	  top:55% !important;
+  }*/
+}
+
+@media screen and (min-width:1400px) and (min-height:600px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {
+      /*height:100vh !important;*/
+   }
+}
+
+@media screen and (min-width:960px) and (min-height:1000px) {
+
+   .heroSlider .rsOverflow,
+   .royalSlider.heroSlider {}
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+   /* .royalSlider.heroSlider,
+  .royalSlider.heroSlider .rsOverflow {
+  }
+  .infoBlock {
+    padding: 10px;
+    height: auto;
+    max-height: 100%;
+    min-width: 40%;
+    left: 5px;
+    top: 5px;
+    right: auto;
+    font-size: 12px;
+  }
+  .rsMinW .rsArrowLeft { top: 15px !important; }
+  .rsMinW .rsArrowRight { top: 15px !important; }
+  .rsMinW .rsBullets { top: 18px !important; }*/
+
+}
+
+#page-navigation {
+   display: none;
+}

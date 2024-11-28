@@ -1,0 +1,120 @@
+/* Compatibility styles for frameworks like bootstrap, foundation e.t.c */
+.xzoom-source img,
+.xzoom-preview img,
+.xzoom-lens img {
+   display: block;
+   max-width: none;
+   max-height: none;
+}
+
+/* --------------- */
+
+/* xZoom Styles below */
+.xzoom-container {
+   display: inline-block;
+}
+
+.xzoom-img {
+   padding: 0;
+   border: #ccc 1px solid;
+   width: 80%;
+   float: right;
+}
+
+.xzoom-img img {
+   display: block;
+}
+
+.xzoom-thumbs {
+   width: 18%;
+   float: left;
+}
+
+.xzoom {
+   width: 520px;
+}
+
+/* Thumbs */
+.xzoom-gallery {
+   border: #ccc 1px solid;
+}
+
+.xzoom-source,
+.xzoom-hidden {
+   display: block;
+   position: static;
+   float: none;
+   clear: both;
+   margin: 0;
+}
+
+/* Everything out of border is hidden */
+.xzoom-hidden {
+   overflow: hidden;
+}
+
+/* Preview */
+.xzoom-preview {
+   border: 1px solid #888;
+   background: #2f4f4f;
+   margin: 1px;
+}
+
+/* Lens */
+.xzoom-lens {
+   border: 1px solid #555;
+   cursor: crosshair;
+}
+
+/* Loading */
+.xzoom-loading {
+   background-position: center center;
+   background-repeat: no-repeat;
+   border-radius: 100%;
+   opacity: .7;
+   background: url(../Styles/images/xloading.gif);
+   width: 48px;
+   height: 48px;
+}
+
+/* Additional class that applied to thumb when it is active */
+.xactive {
+   border: 3px solid #0a78d6;
+   padding: 0;
+}
+
+/* Caption */
+.xzoom-caption {
+   position: absolute;
+   bottom: -43px;
+   left: 0;
+   background: #000;
+   width: 100%;
+   text-align: left;
+}
+
+.xzoom-caption span {
+   color: #fff;
+   font-family: Arial, sans-serif;
+   display: block;
+   font-size: 0.75em;
+   font-weight: bold;
+   padding: 10px;
+}
+
+
+@media screen and (max-width:960px) {
+   .xzoom-container {
+      margin-bottom: 30px;
+   }
+
+   .xzoom-preview {
+      margin: 1px;
+   }
+}
+
+@media screen and (max-width:599px) {
+   .xzoom-gallery {
+      width: 70px;
+   }
+}

@@ -1,0 +1,27 @@
+#tt {
+   position: absolute;
+   display: block;
+   z-index: 100;
+}
+
+#tttop {
+   display: block;
+   height: 0px;
+   margin-left: 0px;
+   overflow: hidden;
+}
+
+#ttcont {
+   display: block;
+   PADDING: 5px;
+   BORDER: 1px solid #000000;
+   BACKGROUND-COLOR: #fffeec;
+   COLOR: #000000;
+}
+
+#ttbot {
+   display: block;
+   height: 0px;
+   margin-left: 0px;
+   overflow: hidden;
+}

@@ -1,0 +1,603 @@
+/*---------------------------------
+	FORMS
+-----------------------------------*/
+form {
+   padding: 0;
+   margin: 0;
+   font-size: 16px;
+   line-height: 26px;
+}
+
+fieldset {
+   margin: 0;
+   padding: 10px 10%;
+   border: none;
+}
+
+label {
+   display: inline-block;
+   display: inline;
+   width: 30%;
+   padding: 14px 0 2px 0;
+   zoom: 1;
+   vertical-align: top;
+}
+
+.radio-label {
+   padding: 0;
+}
+
+.push-left {
+   margin-left: calc(30% + 3px) !important;
+}
+
+fieldset .hint {
+   margin: 5px 0 10px 30%;
+   margin-left: calc(30% + 3px);
+   font-size: 12px;
+   line-height: 14px;
+   color: #666;
+}
+
+input[type="text"],
+textarea,
+select {
+   display: inline-block;
+   display: inline;
+   vertical-align: middle;
+   width: 68%;
+   zoom: 1;
+   margin: 3px 0;
+   border: #fff 1px solid;
+   padding: 10px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   background: #fff;
+   font-size: 16px;
+}
+
+input:disabled,
+textarea:disabled {
+   opacity: 1 !important;
+}
+
+select {
+   display: inline;
+   width: 68%;
+   margin: 3px 0;
+   border: 1px solid #fff;
+   padding: 10px;
+   vertical-align: middle;
+   text-indent: 0px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+   background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+   background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+   background-repeat: no-repeat;
+}
+
+
+
+
+textarea {
+   width: 68%;
+   margin: 3px 0;
+   border: 1px solid #fff;
+   vertical-align: middle;
+   font-family: inherit;
+   font-size: inherit;
+}
+
+fieldset div.group {
+   display: inline-block;
+   display: inline;
+   zoom: 1;
+   width: 68%;
+   margin: 14px 0;
+}
+
+fieldset div.group-full {
+   display: inline-block;
+   display: inline;
+   zoom: 1;
+   width: 100%;
+   margin: 14px 0;
+}
+
+fieldset div.group label {
+   display: inline;
+   vertical-align: baseline;
+   width: auto;
+   padding-right: 20px;
+}
+
+fieldset div.group-full label {
+   display: inline;
+   vertical-align: baseline;
+   width: auto;
+   padding-right: 20px;
+}
+
+/*fieldset div.group br{
+	display:none;
+}*/
+
+span.desc {
+   color: #666;
+   font-size: 12px;
+   line-height: 14px;
+}
+
+span.asterisk {
+   color: #ff0000;
+}
+
+.label-padding {
+   padding: 2px 0 0 0;
+}
+
+fieldset div.single-check {
+   display: inline-block;
+   display: inline;
+   zoom: 1;
+   width: 100%;
+   margin: 14px 0 0 20px;
+   padding-left: 20px;
+}
+
+fieldset div.single-check.full {
+   padding-left: 0px;
+}
+
+fieldset div.single-check label {
+   display: inline;
+   vertical-align: baseline;
+   width: auto;
+   padding-right: 20px;
+}
+
+fieldset div.single-check input.checkbox,
+fieldset div.single-check input[type="checkbox"] {
+   display: inline;
+   margin-left: -20px;
+   padding: 0;
+}
+
+fieldset div.single-check input.radio,
+fieldset div.single-check input[type="radio"] {
+   display: inline;
+   margin-left: -20px;
+   padding: 0;
+}
+
+
+.cardNo1 {
+   width: 20% !important;
+   margin-right: 1% !important;
+   text-align: center !important;
+}
+
+.cardNo2 {
+   width: 46.5% !important;
+   text-align: left !important;
+}
+
+.icNo {
+   margin-right: 5px !important;
+   text-align: center !important;
+}
+
+.icNo.box1 {
+   width: 95px !important;
+}
+
+.icNo.box2 {
+   width: 55px !important;
+}
+
+.icNo.box3 {
+   width: 75px !important;
+}
+
+form hr {
+   height: 1px;
+   margin: 20px 0;
+   outline: 0;
+   border: 0;
+   border-top: #aaa 1px solid;
+}
+
+
+.form-confirm input[type="text"],
+.form-confirm textarea,
+.form-confirm select {
+   border: none;
+   -moz-border-radius: 0;
+   -webkit-border-radius: 0;
+   border-radius: 0;
+   background: #fff;
+}
+
+
+
+
+/* FOCUS STATES */
+input[type="text"]:focus,
+textarea:focus,
+select:focus,
+input[type="file"]:focus,
+input[type="password"]:focus {
+   -webkit-box-shadow: 0 0 3px #6DB9FF;
+   -moz-box-shadow: 0 0 3px #6DB9FF;
+   box-shadow: 0 0 3px #6DB9FF;
+   border: 1px solid #50B1FE;
+   outline: none;
+}
+
+/* TRANSITION */
+input[type="text"],
+textarea,
+button,
+a.button,
+a,
+input[type="file"] {
+   -moz-transition: -moz-box-shadow 0.5s, border 0.5s, background 0.5s;
+   -webkit-transition: -webkit-box-shadow 0.5s, border 0.5s, background 0.5s;
+   -o-transition: box-shadow 0.5s, border 0.5s, background 0.5s;
+   transition: box-shadow 0.5s, border 0.5s, background 0.5s;
+}
+
+input.checkbox,
+input[type="checkbox"] {
+   display: inline;
+   margin: 3px;
+   padding: 0;
+}
+
+input.radio,
+input[type="radio"] {
+   display: inline;
+   margin: 3px 2px;
+   padding: 0;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+   -webkit-box-shadow: 0 0 5px #6DB9FF;
+   -moz-box-shadow: 0 0 5px #6DB9FF;
+   box-shadow: 0 0 5px #6DB9FF;
+   outline-color: #6DB9FF;
+}
+
+input.file,
+input[type="file"] {
+   /*font-size:0.8em;*/
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+   border: none;
+   margin: 3px 0;
+   height: 45px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.button-box {
+   margin-bottom: -40px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size: 16px;
+   width: auto;
+   padding: 13px 40px;
+   margin: 3px;
+   color: #fff;
+   font-weight: 700;
+   text-decoration: none;
+   cursor: pointer;
+   -moz-border-radius: 23px;
+   -webkit-border-radius: 23px;
+   text-transform: uppercase;
+   border-radius: 23px;
+   border: none;
+   background-color: #411fa3;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+   background-color: #383838;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+
+
+
+/*Gift Form*/
+.gifts-search-form .gifts-search-form-detail {
+   display: inline-block;
+   float: left;
+   padding: 0;
+   margin: 0;
+}
+
+.gifts-search-form .gifts-search-form-detail input[type="text"] {
+   display: inline-block;
+   float: left;
+   margin: 3px 6px 3px 0;
+   padding: 11px 10px;
+   font-size: 14px;
+}
+
+.gifts-search-form .gifts-search-form-detail input[type="text"].keyword {
+   width: 400px;
+}
+
+.gifts-search-form .gifts-search-form-detail input[type="text"].amount {
+   width: 80px;
+}
+
+.gifts-search-form .gifts-search-form-detail select {
+   display: inline-block;
+   float: left;
+   margin: 3px 6px 3px 0;
+   font-size: 14px;
+   padding: 10px 5px;
+}
+
+.gifts-search-form .gifts-search-form-detail .select-sort {
+   width: 164px;
+}
+
+.gifts-search-form .gifts-search-form-detail .select-range {
+   width: 144px;
+}
+
+input.btn-search {
+   width: 41px !important;
+   height: 41px !important;
+   background-image: url(../images/btn-go-purple.png) !important;
+   background-size: 41px 41px !important;
+   border-radius: 0 !important;
+   padding: 0 !important;
+   margin: 3px 6px 3px 0 !important;
+   background-color: transparent !important;
+}
+
+input.btn-search:hover {
+   background-color: transparent;
+}
+
+
+
+/*Vertical Form*/
+form.vertical label,
+div.vertical label {
+   display: block;
+   width: 100%;
+   margin-bottom: 5px;
+}
+
+form.vertical input[type="text"],
+div.vertical input[type="text"],
+form.vertical select,
+div.vertical select,
+form.vertical textarea,
+div.vertical textarea {
+   width: 100%;
+   display: block;
+}
+
+form.vertical div.group,
+div.vertical div.group {
+   margin: 8px 0;
+   width: 100%;
+}
+
+form.vertical .cardNo1,
+div.vertical .cardNo1,
+form.vertical .cardNo2,
+div.vertical .cardNo2 {
+   display: inline-block !important;
+}
+
+/*form.vertical div.group br{
+	display:none;
+}*/
+form.vertical .icNo,
+div.vertical .icNo {
+   display: inline-block !important;
+}
+
+
+
+
+
+@media screen and (max-width:800px) {
+   fieldset {
+      padding: 0 3%;
+   }
+
+   form label {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+   }
+
+   form input[type="text"],
+   form select,
+   form textarea {
+      width: 100%;
+      display: block;
+   }
+
+   .cardNo1,
+   .cardNo2 {
+      display: inline-block !important;
+   }
+
+   .cardNo1 {
+      width: 20% !important;
+   }
+
+   .cardNo2 {
+      width: 78% !important;
+   }
+
+   .icNo {
+      display: inline-block !important;
+   }
+
+   .button-box {
+      margin-bottom: -30px;
+   }
+
+   fieldset div.group {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+   }
+
+   .label-padding {
+      padding: 14px 0 0 0;
+   }
+
+   fieldset .hint {
+      margin: 5px 0 10px 3px;
+   }
+
+   .push-left {
+      margin-left: 0 !important;
+   }
+
+   /*fieldset div.group br{
+		display:block;
+		margin-top:10px;
+	}
+	form.vertical div.group br{
+		display:block;
+	}*/
+}
+
+
+@media screen and (max-width:599px) {
+
+   input[type="text"],
+   textarea,
+   select {
+      font-size: 14px;
+   }
+
+   .gifts-search-form .gifts-search-form-detail {
+      float: none;
+   }
+}
+
+
+
+@media screen and (max-width:480px) {
+   .cardNo1 {
+      width: 25% !important;
+   }
+
+   .cardNo2 {
+      width: 72% !important;
+   }
+
+   input[type="submit"],
+   input[type="reset"],
+   input[type="button"] {
+      padding: 13px 30px !important;
+   }
+
+   .gifts-search-form .gifts-search-form-detail {
+      width: 350px;
+   }
+
+   input.btn-search {
+      padding: 0 !important;
+      margin: 22px 0 3px 0 !important;
+   }
+
+   .gifts-search-form .gifts-search-form-detail input[type="text"].keyword {
+      width: 276px;
+   }
+
+   .gifts-search-form .gifts-search-form-detail input[type="text"].amount {
+      width: 276px;
+   }
+
+   .gifts-search-form .gifts-search-form-detail .select-range {
+      width: 120px;
+      margin-left: 4px;
+   }
+
+   .gifts-search-form .gifts-search-form-detail .select-sort {
+      width: 150px;
+   }
+
+   .gifts-search-form .gifts-search-form-detail select {
+      width: 142px;
+   }
+
+   .gifts-search-form .gifts-search-form-detail select.select-sort {
+      margin: 3px 0 3px 0;
+   }
+
+   .gifts-search-form .gifts-search-form-detail .group {
+      width: 280px;
+   }
+
+   .gifts-search-form .gifts-search-form-detail select {
+      background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%) !important;
+   }
+
+   .gifts-search-form .gifts-search-form-detail .gift-search-button {
+      padding: 5px !important;
+   }
+}
+
+
+@media screen and (max-width:420px) {}
+
+input.points {
+   display: inline-block;
+   display: inline;
+   vertical-align: middle;
+   width: 100px;
+   zoom: 1;
+   margin: 4px 0;
+   font-size: 16px;
+   font-family: 'Roboto Condensed', sans-serif;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   height: 38px;
+   padding: 6px 10px;
+   /* The 6px vertically centers text on FF, ignored by Webkit */
+   background-color: #ece8f6;
+   border: 2px solid #ae9fd3;
+   border-radius: 6px;
+   box-shadow: none;
+   box-sizing: border-box;
+}

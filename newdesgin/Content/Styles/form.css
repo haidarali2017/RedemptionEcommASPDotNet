@@ -1,0 +1,401 @@
+.login-left-panel .bl-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+}
+
+.login-right-panel .bl-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+}
+
+.bl-form i {
+  float: left;
+}
+
+.bl-form h1 {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 32px;
+  float: left;
+  margin: 0;
+}
+
+.bl-form h1 span {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.bl-form input.cardNo1 {
+  width: 24% !important;
+  text-align: center;
+}
+
+.bl-form input.cardNo2 {
+  width: 73.5% !important;
+  text-align: left;
+}
+
+.bl-form .form-note {
+  margin-left: 31%;
+  font-size: 0.75em;
+}
+
+.bl-form-signup {
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+}
+
+.bl-form-signup li {
+  display: inline-block;
+  display: inline;
+  list-style: none;
+  margin: 0 2px;
+}
+
+#form-container .linebox {
+  padding: 10px;
+}
+
+.login-left-panel,
+.login-right-panel {
+  position: relative;
+  min-height: 650px;
+}
+
+.login-left-panel {
+  background: #fff;
+}
+
+.login-right-panel {
+  background: url(../assets/images/login-bgimg.jpg) top center no-repeat;
+}
+
+/* Buttons
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.bl-form .button,
+.bl-form button,
+.bl-form input[type="submit"],
+.bl-form input[type="reset"],
+.bl-form input[type="button"] {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  width: auto;
+  padding: 13px 40px;
+  margin: 3px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  -moz-border-radius: 23px;
+  -webkit-border-radius: 23px;
+  text-transform: uppercase;
+  border-radius: 23px;
+  border: none;
+  background-color: #411fa3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.bl-form .button:hover,
+.bl-form button:hover,
+.bl-form input[type="submit"]:hover,
+.bl-form input[type="reset"]:hover,
+.bl-form input[type="button"]:hover,
+.bl-form .button:focus,
+.bl-form button:focus,
+.bl-form input[type="submit"]:focus,
+.bl-form input[type="reset"]:focus,
+.bl-form input[type="button"]:focus {
+  color: #999;
+  background-color: #4a4a4a;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+}
+
+.bl-form .button.button-primary,
+.bl-form button.button-primary,
+.bl-form input[type="submit"].button-primary,
+.bl-form input[type="reset"].button-primary,
+.bl-form input[type="button"].button-primary {
+  color: #fff;
+  background-color: #067fb8;
+  border-color: #005a86;
+  margin-right: 8%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-top: 15px;
+}
+
+.bl-form .button.button-primary:hover,
+.bl-form button.button-primary:hover,
+.bl-form input[type="submit"].button-primary:hover,
+.bl-form input[type="reset"].button-primary:hover,
+.bl-form input[type="button"].button-primary:hover,
+.bl-form .button.button-primary:focus,
+.bl-form button.button-primary:focus,
+.bl-form input[type="submit"].button-primary:focus,
+.bl-form input[type="reset"].button-primary:focus,
+.bl-form input[type="button"].button-primary:focus {
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #005a86;
+  border-color: #005a86;
+}
+
+/* Forms
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.bl-form input[type="email"],
+.bl-form input[type="number"],
+.bl-form input[type="search"],
+.bl-form input[type="text"],
+.bl-form input[type="tel"],
+.bl-form input[type="url"],
+.bl-form input[type="password"],
+.bl-form textarea,
+.bl-form select {
+  display: inline-block;
+  display: inline;
+  vertical-align: middle;
+  width: 100%;
+  zoom: 1;
+  margin: 4px 0;
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 38px;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #ece8f6;
+  border: 2px solid #ae9fd3;
+  border-radius: 6px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.bl-form textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.bl-form input[type="email"]:focus,
+.bl-form input[type="number"]:focus,
+.bl-form input[type="search"]:focus,
+.bl-form input[type="text"]:focus,
+.bl-form input[type="tel"]:focus,
+.bl-form input[type="url"]:focus,
+.bl-form input[type="password"]:focus,
+.bl-form textarea:focus,
+.bl-form select:focus {
+  border: 2px solid #411fa3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+}
+
+.bl-form label,
+.bl-form legend {
+  display: block;
+  /*display:inline-block;
+	*display:inline;*/
+  width: 100%;
+  padding: 14px 0 0 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  zoom: 1;
+  vertical-align: top;
+  font-size: 1.1em;
+}
+
+.bl-form .cluebox label {
+  width: 23%;
+}
+
+.bl-form .redemption label {
+  width: 100%;
+}
+
+.bl-form .redemption input[type="radio"] {
+  margin-top: 10px;
+}
+
+.bl-form .cluebox input {
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.bl-form fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+.bl-form input[type="checkbox"],
+.bl-form input[type="radio"] {
+  display: inline;
+}
+
+.bl-form label > .label-body {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: normal;
+}
+
+.bl-form .reset-form-box label {
+  font-size: 16px !important;
+}
+
+/* Media Queries
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+@media (max-width: 800px) {
+  .login-left-panel,
+  .login-right-panel {
+    min-height: 500px !important;
+  }
+
+  .login-right-panel .bl-form {
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-right-panel {
+    display: none;
+  }
+
+  ul.bl-form-signup {
+    margin: 0 0 0 15px;
+  }
+
+  .bl-form-signup li {
+    width: 30px;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (max-width: 550px) {
+  .bl-form input[type="email"],
+  .bl-form input[type="number"],
+  .bl-form input[type="search"],
+  .bl-form input[type="text"],
+  .bl-form input[type="tel"],
+  .bl-form input[type="url"],
+  .bl-form input[type="password"],
+  .bl-form textarea,
+  .bl-form select {
+    vertical-align: middle;
+    width: 99%;
+  }
+
+  .bl-form label {
+    width: 100%;
+  }
+
+  .bl-form .form-note {
+    margin-left: 1%;
+  }
+
+  .bl-form .button.button-primary,
+  .bl-form button.button-primary,
+  .bl-form input[type="submit"].button-primary,
+  .bl-form input[type="reset"].button-primary,
+  .bl-form input[type="button"].button-primary {
+    margin-right: 1%;
+
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-right-panel {
+    margin-left: -180px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .bl-form input[type="submit"] {
+    min-width: 130px !important;
+  }
+
+  .login-right-panel .bl-form button {
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 30px;
+    min-width: 100px;
+    height: 30px;
+  }
+
+  ul.bl-form-signup {
+    margin: 0 0 0 10px;
+  }
+
+  .login-right-panel .bl-form h1 {
+    font-size: 16px !important;
+    line-height: 14px !important;
+    text-align: left !important;
+    margin-left: 26px;
+  }
+
+  .login-right-panel .bl-form h1 span {
+    font-size: 14px !important;
+  }
+
+  .login-right-panel .bl-form i {
+    position: absolute;
+    width: 24px;
+    left: 10px;
+    top: 22px;
+  }
+
+  .bl-form-signup li {
+    width: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  .login-right-panel {
+    margin-left: -150px !important;
+  }
+
+  .bl-form input.cardNo1 {
+    width: 27.5% !important;
+  }
+
+  .bl-form input.cardNo2 {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .login-right-panel {
+    margin-left: -140px !important;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}

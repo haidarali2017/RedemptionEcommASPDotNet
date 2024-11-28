@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61BC26E3-7383-4E80-8D7E-EE776E12C593}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>newdesgin</RootNamespace>
+    <AssemblyName>newdesgin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44383</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\Images\ambank-bl-visa-menu2.jpg" />
+    <Content Include="Content\assets\Images\arrow-down.png" />
+    <Content Include="Content\assets\Images\bg-header-bonuslink.png" />
+    <Content Include="Content\assets\Images\bg-white-left.png" />
+    <Content Include="Content\assets\Images\bl-card.png" />
+    <Content Include="Content\assets\Images\bl-logo-bonuslink.png" />
+    <Content Include="Content\assets\Images\btn-appgallery.png" />
+    <Content Include="Content\assets\Images\btn-appstore2.png" />
+    <Content Include="Content\assets\Images\btn-googleplay2.png" />
+    <Content Include="Content\assets\Images\icon-appstore.png" />
+    <Content Include="Content\assets\Images\icon-cart-white.png" />
+    <Content Include="Content\assets\Images\icon-close.png" />
+    <Content Include="Content\assets\Images\icon-facebook.jpg" />
+    <Content Include="Content\assets\Images\icon-fb.png" />
+    <Content Include="Content\assets\Images\icon-filter-category.png" />
+    <Content Include="Content\assets\Images\icon-filter.png" />
+    <Content Include="Content\assets\Images\icon-googleplay.png" />
+    <Content Include="Content\assets\Images\icon-huaweiappgallery.png" />
+    <Content Include="Content\assets\Images\icon-insta.png" />
+    <Content Include="Content\assets\Images\icon-login-page.png" />
+    <Content Include="Content\assets\Images\icon-pinterest.jpg" />
+    <Content Include="Content\assets\Images\icon-plus.png" />
+    <Content Include="Content\assets\Images\icon-points-exchange-bonuslink.png" />
+    <Content Include="Content\assets\Images\icon-points.png" />
+    <Content Include="Content\assets\Images\icon-products-bonuslink.png" />
+    <Content Include="Content\assets\Images\icon-search.png" />
+    <Content Include="Content\assets\Images\icon-share-add.jpg" />
+    <Content Include="Content\assets\Images\icon-sign-up.png" />
+    <Content Include="Content\assets\Images\icon-sort.png" />
+    <Content Include="Content\assets\Images\icon-twitter.jpg" />
+    <Content Include="Content\assets\Images\icon-vouchers-bonuslink.png" />
+    <Content Include="Content\assets\Images\icon-wishlist-white.png" />
+    <Content Include="Content\assets\Images\icon-youtube.png" />
+    <Content Include="Content\assets\Images\login-bgimg.jpg" />
+    <Content Include="Content\assets\Images\logo-blink.png" />
+    <Content Include="Content\assets\Images\mobile.png" />
+    <Content Include="Content\assets\Images\qr-code.jpg" />
+    <Content Include="Content\assets\Products\W\Categories\Images\ambank-bl-visa-menu2.jpg" />
+    <Content Include="Content\assets\Products\W\Categories\Images\arrow-down.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\bg-header-bonuslink.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\bl-card.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\bl-logo-bonuslink.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\btn-appgallery.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\btn-appstore2.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\btn-googleplay2.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-appstore.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-cart-white.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-close.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-facebook.jpg" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-fb.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-filter-category.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-filter.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-googleplay.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-huaweiappgallery.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-insta.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-login-page.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-pinterest.jpg" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-points.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-search.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-share-add.jpg" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-sign-up.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-sort.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-twitter.jpg" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-wishlist-white.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\icon-youtube.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\logo-blink.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\mobile.png" />
+    <Content Include="Content\assets\Products\W\Categories\Images\qr-code.jpg" />
+    <Content Include="Content\assets\Products\W\Categories\page_1.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_10.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_11.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_12.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_13.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_14.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_15.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_16.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_17.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_18.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_19.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_2.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_20.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_21.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_22.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_23.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_24.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_25.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_26.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_3.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_4.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_5.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_6.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_7.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_8.html" />
+    <Content Include="Content\assets\Products\W\Categories\page_9.html" />
+    <Content Include="Content\assets\Products\W\Details\6550_999_Gold_Pixiu_with_Obsidian_Ring_S.html" />
+    <Content Include="Content\assets\Products\W\Details\6551_999_Gold_Pixiu_with_Obsidian_Ring_M.html" />
+    <Content Include="Content\assets\Products\W\Details\6552_916_Gold_Classic_Studs_Earring_M_1_pair.html" />
+    <Content Include="Content\assets\Products\W\Details\6556_916_Gold_Classic_Studs_Earring_S_1_pair.html" />
+    <Content Include="Content\assets\Products\W\Details\6560_TNG_RFID_Selffitment_Kit__1_Tag.html" />
+    <Content Include="Content\assets\Products\W\Details\6668_916_Gold_Pendant__Horoscopes.html" />
+    <Content Include="Content\assets\Products\W\Details\6669_916_Gold_Bracelet.html" />
+    <Content Include="Content\assets\Products\W\Details\6671_916_Gold_Pendant__Hibiscus.html" />
+    <Content Include="Content\assets\Products\W\Details\6674_916_Gold_Pendant__Abacus.html" />
+    <Content Include="Content\assets\Products\W\Details\6675_916_Gold_Pendant__Heart_with_Bell.html" />
+    <Content Include="Content\assets\Products\W\Details\6741_916_Gold_Charm__Pendant_M.html" />
+    <Content Include="Content\assets\Products\W\Details\6788_916_Gold_Earrings_S.html" />
+    <Content Include="Content\assets\Products\W\Details\6834_MSignature__Principal_Visa_Only.html" />
+    <Content Include="Content\assets\Products\W\Details\6835_MSignature__Supplementary_Visa_Only.html" />
+    <Content Include="Content\assets\Products\W\Details\6836_MPlatinum__Principal_VisaMasterCard.html" />
+    <Content Include="Content\assets\Products\W\Details\6837_MPlatinum__Supplementary_VisaMasterCard.html" />
+    <Content Include="Content\assets\Products\W\Details\6838_DualCard_MPlatinum_VisaMastercard__Principal.html" />
+    <Content Include="Content\assets\Products\W\Details\6839_DualCard_MPlatinum_VisaMastercard__Supplement.html" />
+    <Content Include="Content\assets\Products\W\Details\6840_AmBank_BonusLink_Signature__Principal_Visa_On.html" />
+    <Content Include="Content\assets\Products\W\Details\6841_AmBank_BonusLink_Signature__Supplementary_Vis.html" />
+    <Content Include="Content\assets\Products\W\Details\6842_AmBank_BonusLink_Platinum__Principal_Visa_Onl.html" />
+    <Content Include="Content\assets\Products\W\Details\6843_AmBank_BonusLink_Platinum__Supplementary_Visa.html" />
+    <Content Include="Content\assets\Products\W\Details\6844_MCard_Gold__Principal_VisaMasterCard.html" />
+    <Content Include="Content\assets\Products\W\Details\6845_MGold__Supplementary_VisaMasterCard.html" />
+    <Content Include="Content\assets\Products\W\Details\6846_DualCard_MGold_VisaMasterCard__Principal.html" />
+    <Content Include="Content\assets\Products\W\Details\6847_DualCard_MGold_VisaMasterCard__Supplementary.html" />
+    <Content Include="Content\assets\Products\W\Details\6848_AmBank_BonusLink_Gold__Principal_Visa_Only.html" />
+    <Content Include="Content\assets\Products\W\Details\6849_AmBank_BonusLink_Gold__Supplementary_Visa_Onl.html" />
+    <Content Include="Content\assets\Products\W\Details\6855_300_Enrich_Points.html" />
+    <Content Include="Content\assets\Products\W\Details\6860_PAMP_SUISSE_9999_Gold_Bar.html" />
+    <Content Include="Content\assets\Products\W\Details\6861_Freshwater_Pearl_925_Silver_Studs_Earring.html" />
+    <Content Include="Content\assets\Products\W\Details\6869_HeartShaped_999_Gold_Bead__1_gram.html" />
+    <Content Include="Content\assets\Products\W\Details\6870_IngotShaped_999_Gold_Bead__1_gram.html" />
+    <Content Include="Content\assets\Products\W\Details\6871_StarShaped_999_Gold_Bead__1_gram.html" />
+    <Content Include="Content\assets\Products\W\Details\6872_RoundShaped_999_Gold_Bead__1_gram.html" />
+    <Content Include="Content\assets\Products\W\Details\6883_950_airasia_Points.html" />
+    <Content Include="Content\assets\Products\W\Details\6885_LITZ_100g_9999_Fine_Gold_Bar_LJ100G.html" />
+    <Content Include="Content\assets\Products\W\Details\6886_LITZ_050g_9999_Fine_Gold_Bar_LJ050G.html" />
+    <Content Include="Content\assets\Products\W\Details\6889_ELBA_DRY_IRON_WITH_SPRAY_EDIG1236PP.html" />
+    <Content Include="Content\assets\Products\W\Details\6890_ELBA_GARMENT_STEAM_IRON_EGSIG1842LB.html" />
+    <Content Include="Content\assets\Products\W\Details\6891_ELBA_16_INCH_STAND_FAN_ESFJ1688GR.html" />
+    <Content Include="Content\assets\Products\W\Details\6894_ELECTROLUX_STEAM_IRON_E6SI362MN_MISTY_NAVY.html" />
+    <Content Include="Content\assets\Products\W\Details\6897_SHARP_AIR_PURIFIER_COVER_AREA_23M2_FPJ30LA.html" />
+    <Content Include="Content\assets\Products\W\Details\6899_HETCH_H2_HANDHELD_VACUUM_CLEANER__MOP_HVC1413.html" />
+    <Content Include="Content\assets\Products\W\Details\6900_IMAXX_CORDLESS_VACUUM_CLEANER_K9.html" />
+    <Content Include="Content\assets\Products\W\Details\6903_ELBA_CERAMIC_COOKER_ECCJ2015BK.html" />
+    <Content Include="Content\assets\Products\W\Details\6904_ELBA_FOOD_STEAMER_EFSM1038SS_10L.html" />
+    <Content Include="Content\assets\Products\W\Details\6905_ELBA_2_IN_1_HOT_POT__BBQ_GRILLER_BLACK_EGLK30.html" />
+    <Content Include="Content\assets\Products\W\Details\6906_ELBA_17L_STAINLESS_STEEL_JUG_KETTLE_EJKJ1762S.html" />
+    <Content Include="Content\assets\Products\W\Details\6907_ELBA_5L_ELECTRIC_KETTLE_EKK5226SS.html" />
+    <Content Include="Content\assets\Products\W\Details\6908_ELBA_MULTICOOKER_9L_EMCN9015BL.html" />
+    <Content Include="Content\assets\Products\W\Details\6913_TEFAL_EASY_RICE_PLUS_RICE_COOKER_18L_RK736B.html" />
+    <Content Include="Content\assets\Products\W\Details\6914_TEFAL_OPTI_TOUCH_HAND_BLENDER_HB8338.html" />
+    <Content Include="Content\assets\Products\W\Details\6915_TEFAL_TOAST_N_MORE_TOASTER_TT5528.html" />
+    <Content Include="Content\assets\Products\W\Details\6916_KITCHENAID_ELECTRIC_TOASTER_5KMT223GOB_ONYX_B.html" />
+    <Content Include="Content\assets\Products\W\Details\6917_KITCHENAID_9_SPEED_HAND_MIXER_5KHM9212BOB_ONX.html" />
+    <Content Include="Content\assets\Products\W\Details\6918_KITCHENAID_48L_TILT_HEAD_STAND_MIXER_5KSM125B.html" />
+    <Content Include="Content\assets\Products\W\Details\6919_NESCAFE_DOLCE_GUSTO_GENIO_S_PLUS_RED.html" />
+    <Content Include="Content\assets\Products\W\Details\6923_DELONGHI_STILOSA_ESPRESSO_MACHINE_EC230BK.html" />
+    <Content Include="Content\assets\Products\W\Details\6924_KENWOOD_3IN1_SANDWICH__WAFFLE_MAKER_SMP84C0WH.html" />
+    <Content Include="Content\assets\Products\W\Details\6925_SHARP_25L_MICROWAVE_WITH_GRILL_FUNCTION__R752.html" />
+    <Content Include="Content\assets\Products\W\Details\6926_ELECTROLUX_COFFEE_MAKER_E2CM1200W_WHITE.html" />
+    <Content Include="Content\assets\Products\W\Details\6929_PYREX_EASY_VENT_6PCS_SQUARE_SET_PX3EV358SWHRM.html" />
+    <Content Include="Content\assets\Products\W\Details\6930_Pyrex_5Pcs_Caf_Set_Country_Rose_PxJyjar4CupRs.html" />
+    <Content Include="Content\assets\Products\W\Details\6931_LA_GOURMET_PACK_TO_GO_235L_3_TIER_TIFFIN_CARR.html" />
+    <Content Include="Content\assets\Products\W\Details\6932_LA_GOURMET_3R_PACK_TO_GO_09L_RECTANGULAR_WITH.html" />
+    <Content Include="Content\assets\Products\W\Details\6935_SHOGUN_SENJO_40CM_NONSTICK_MARBLE_WOK_WITH_IN.html" />
+    <Content Include="Content\assets\Products\W\Details\6943_LA_GOURMET_SAKURA_3PCS_SET_05L_THERMAL_FLASK_.html" />
+    <Content Include="Content\assets\Products\W\Details\6944_SHOGUN_KESSENTIAL_SILICONE_UTENSIL_SET.html" />
+    <Content Include="Content\assets\Products\W\Details\6948_TUPPERWARE_ECO_FLIP_TOP_BOTTLE_1L_2_11153009A.html" />
+    <Content Include="Content\assets\Products\W\Details\6949_TUPPERWARE_ECO_BOTTLE_2L_2_11152362ASSORTED_C.html" />
+    <Content Include="Content\assets\Products\W\Details\6950_TUPPERWARE_ONE_TOUCH_TOPPER_JUNIOR_590ML_2_11.html" />
+    <Content Include="Content\assets\Products\W\Details\6952_TUPPERWARE_LARGE_SQUARE_AWAY_620ML_4_11152747.html" />
+    <Content Include="Content\assets\Products\W\Details\6953_TUPPERWARE_FM_MEDIUM_II_2_15L_11128624ASSORTE.html" />
+    <Content Include="Content\assets\Products\W\Details\6954_THERMOS_450ML_VACUUM_INSULATED_MUG_JDG450S.html" />
+    <Content Include="Content\assets\Products\W\Details\6956_THERMOS_15L_MODERN_CARAFE_TTB1500_DBW.html" />
+    <Content Include="Content\assets\Products\W\Details\6959_TEFAL_CLEAR_COOK_3PCS_SET_B266S3.html" />
+    <Content Include="Content\assets\Products\W\Details\6960_TEFAL_COOKING_SOURCE_3PCS_SET_B504S2.html" />
+    <Content Include="Content\assets\Products\W\Details\6967_PREORDER_MACBOOK_AIR_136_GPU8GB256GB.html" />
+    <Content Include="Content\assets\Products\W\Details\6969_PREORDER_109INCH_IPAD_AIR_WIFI_64GBASSORTED_C.html" />
+    <Content Include="Content\assets\Products\W\Details\6970_PREORDER_AIRPODS_MAXASSORTED_COLOR.html" />
+    <Content Include="Content\assets\Products\W\Details\6973_PINENG_POWERBANK_20000MAH_PN959.html" />
+    <Content Include="Content\assets\Products\W\Details\6974_PINENG_POWERBANK_30000MAH_PN899PD.html" />
+    <Content Include="Content\assets\Products\W\Details\6975_YOOBAO_LC2G2_10000MAH_QUICK_CHARGE_POWER_BANK.html" />
+    <Content Include="Content\assets\Products\W\Details\6979_SONICGEAR_SONICGO_1_PORTABLE_WIRELESS_BLUETOO.html" />
+    <Content Include="Content\assets\Products\W\Details\6981_NINTENDO_SWITCH_OLED_CONSOLE_WITH_WHITE_JOYCO.html" />
+    <Content Include="Content\assets\Products\W\Details\6982_NINTENDO_SWITCH_GAMEMARIO_KART_8_DELUXE.html" />
+    <Content Include="Content\assets\Products\W\Details\6983_NINTENDO_SWITCH_GAMESUPER_MARIO_ODYSSEY.html" />
+    <Content Include="Content\assets\Products\W\Details\6984_SOUNDTEOH_TRAVEL_ADAPTOR_WITH_USB_AC_QUICK_CH.html" />
+    <Content Include="Content\assets\Products\W\Details\6985_LOGITECH_WIRELESS_USB_MOUSE_M221.html" />
+    <Content Include="Content\assets\Products\W\Details\6986_LOGITECH_SILENT_WIRELESS_KEYBOARD__MOUSE_COMB.html" />
+    <Content Include="Content\assets\Products\W\Details\6990_REMINGTON_PRO_SOFT_CURL_CI6525.html" />
+    <Content Include="Content\assets\Products\W\Details\6991_REMINGTON_RECHARGEABLE_LADY_SHAVER_WDF5030.html" />
+    <Content Include="Content\assets\Products\W\Details\6992_REMINGTON_TITANIUM_HAIR_CLIPPER_HC335.html" />
+    <Content Include="Content\assets\Products\W\Details\6993_VS_SASSOON_1800W_IONIC_FOLDABLE_DRYER_VS83BIM.html" />
+    <Content Include="Content\assets\Products\W\Details\6994_OMRON_UPPER_ARM_BLOOD_PRESSURE_MONITOR_BLUETO.html" />
+    <Content Include="Content\assets\Products\W\Details\6995_OMRON_EAR_THERMOMETER_TH839S.html" />
+    <Content Include="Content\assets\Products\W\Details\6996_OMRON_DIGITAL_WEIGHT_SCALE_HN289EBK.html" />
+    <Content Include="Content\assets\Products\W\Details\6997_ROSSMAX_FINGERTIP_PULSE_OXIMETER_SB100.html" />
+    <Content Include="Content\assets\Products\W\Details\6998_ROSSMAX_NONCONTACT_TEMPLE_THERMOMETER_HA500Q.html" />
+    <Content Include="Content\assets\Products\W\Details\6999_ROSSMAX_BLUETOOTH_BODY_FAT_MONITOR_WITH_SCALE.html" />
+    <Content Include="Content\assets\Products\W\Details\7000_Braun_Mobile_Shaver_M30.html" />
+    <Content Include="Content\assets\Products\W\Details\7002_ORALB_KIDS_FROZEN_RECHARGEABLE_ELECTRIC_TOOTH.html" />
+    <Content Include="Content\assets\Products\W\Details\7004_OGAWA_MOBILE_SHIATSU_LITE_SHIATSU_BACK_MASSAG.html" />
+    <Content Include="Content\assets\Products\W\Details\7005_OGAWA_IREFLEX_FOOT_MASSAGER_OF1731.html" />
+    <Content Include="Content\assets\Products\W\Details\7016_Barry_Smith_20_Hardcase_Luggage_B10620040301A.html" />
+    <Content Include="Content\assets\Products\W\Details\7019_Barry_Smith_Duffel_Travel_Bag_With_Shoe_Compa.html" />
+    <Content Include="Content\assets\Products\W\Details\7020_BARRY_SMITH_BIG_POCKET_PILLOW_AIR_TRAVEL_MEMO.html" />
+    <Content Include="Content\assets\Products\W\Details\7021_BARRY_SMITH_LUGGAGE_LOCK_WITH_TSA_BSTSA211520.html" />
+    <Content Include="Content\assets\Products\W\Details\7025_SAMMIES_DREAMS_BACKPACK_M_GIRAFFE_ANTM_YELLOW.html" />
+    <Content Include="Content\assets\Products\W\Details\7026_SAMMIES_DREAMS_BACKPACK_M_BUNNY_ANTM_PINK_BY_.html" />
+    <Content Include="Content\assets\Products\W\Details\7027_AMERICAN_TOURISTER_BRAYDON_BACKPACKASSORTED_C.html" />
+    <Content Include="Content\assets\Products\W\Details\7028_AMERICAN_TOURISTER_SKITTLE_NXT_SPINNER_5018_L.html" />
+    <Content Include="Content\assets\Products\W\Details\7029_AMERICAN_TOURISTER_SKITTLE_NXT_SPINNER_5018_T.html" />
+    <Content Include="Content\assets\Products\W\Details\7030_AMERICAN_TOURISTER_LINEX_SPINNER_5520_TSAASSO.html" />
+    <Content Include="Content\assets\Products\W\Details\7032_HELLO_KITTY_SCHOOL_BAG_7022307751.html" />
+    <Content Include="Content\assets\Products\W\Details\7033_HELLO_KITTY_PRE_SCHOOL_TROLLEY_BAG_7022297750.html" />
+    <Content Include="Content\assets\Products\W\Details\7034_FABERCASTELL_CLASSIC_COLOUR_PENCILS_IN_SLIM_F.html" />
+    <Content Include="Content\assets\Products\W\Details\7035_FABERCASTELL_POSTER_COLOUR_OF_18_COLOURS__FAB.html" />
+    <Content Include="Content\assets\Products\W\Details\7041_DAEWOO_WET__DRY_VACUUM_CLEANER_WITH_BLOWER_3_.html" />
+    <Content Include="Content\assets\Products\W\Details\7042_KARCHER_HIGH_PRESSURE_CLEANER_110_BAR_K2_CLAS.html" />
+    <Content Include="Content\assets\Products\W\Details\7043_KARCHER_HEPA_FILTER_BAGLESS_VACUUM_CLEANER_VC.html" />
+    <Content Include="Content\assets\Products\W\Details\7044_KARCHER_WET__DRY_VACUUM_CLEANER_STAINLESS_STE.html" />
+    <Content Include="Content\assets\Products\W\Details\7046_STANLEY_10MM_550W_ROTARY_DRILL_2800RPM_STDR55.html" />
+    <Content Include="Content\assets\Products\W\Details\7074_Forever_Beauty__SPL_Underarm_Hair_Removal_for.html" />
+    <Content Include="Content\assets\Products\W\Details\7075_Forever_Beauty__3_Hr_Aqua_Facial__Aromatherap.html" />
+    <Content Include="Content\assets\Products\W\Details\7076_Forever_Beauty__2_Hour_Aqua_Moist_Facial_for_.html" />
+    <Content Include="Content\assets\Products\W\Details\7077_Forever_Beauty__3_Hr_Aqua_Facial__Aromatherap.html" />
+    <Content Include="Content\assets\Products\W\Details\7295_999_Gold_Foil__Moneybag.html" />
+    <Content Include="Content\assets\Products\W\Details\7296_999_Gold_Foil__Golden.html" />
+    <Content Include="Content\assets\Products\W\Details\7297_999_Gold_Foil__Ingot.html" />
+    <Content Include="Content\assets\Products\W\Details\7300_Thermocafe_550Ml_Tritan_Bottle_KwYq6051BstGre.html" />
+    <Content Include="Content\assets\Products\W\Details\7303_Marshall_Ceramic_Coffee_Mug_In_Matte_Black_Mc.html" />
+    <Content Include="Content\assets\Products\W\Details\7305_Blue_Mountain_IMini_Bento_Lunch_BagAssorted_C.html" />
+    <Content Include="Content\assets\Products\W\Details\7306_Blue_Mountain_ILunch_Cooler_BagAssorted_Color.html" />
+    <Content Include="Content\assets\Products\W\Details\7307_BLUE_MOUNTAIN_IMATT_THERMO_FLASK.html" />
+    <Content Include="Content\assets\Products\W\Details\7312_Marshall_Black_Baseball_Cap_With_White_Logo_M.html" />
+    <Content Include="Content\assets\Products\W\Details\7313_Marshall_Thermal_Bottle_In_Matte_Black__Colle.html" />
+    <Content Include="Content\assets\Products\W\Details\7314_Electrova_Ipure_Portable_Bladeless_Tower_Fan_.html" />
+    <Content Include="Content\assets\Products\W\Details\7315_Hetch_H3_Pro_HyperCleaned_Vacuum_Cleaner_And_.html" />
+    <Content Include="Content\assets\Products\W\Details\7317_Joven_SinkTop_Water_Purifier_Jp200.html" />
+    <Content Include="Content\assets\Products\W\Details\7318_Neckpro_Memory_Foam_Contour_Pillow_PillowMg25.html" />
+    <Content Include="Content\assets\Products\W\Details\7319_Neckpro_Spring_Feel_Luxury_Pillow_PillowB8B13.html" />
+    <Content Include="Content\assets\Products\W\Details\7321_Pionier_Aroma_Diffuser_Wood_Design.html" />
+    <Content Include="Content\assets\Products\W\Details\7322_Sharp_Car_Ion_Generator_Approx_36M_Ignx2Eb.html" />
+    <Content Include="Content\assets\Products\W\Details\7323_Sonicgear_Studiobar_600_Hd.html" />
+    <Content Include="Content\assets\Products\W\Details\7324_Soundteoh_6_Inch_Air_Circulator_Fan_Acf6.html" />
+    <Content Include="Content\assets\Products\W\Details\7325_Soundteoh_Led_Rechargeable_Lamp_With_Remote_C.html" />
+    <Content Include="Content\assets\Products\W\Details\7326_Soundteoh_Motion_Sensor_Led_Hook_Light_Ml223.html" />
+    <Content Include="Content\assets\Products\W\Details\7327_Toshiba_16_Table_Fan_FTsa20GMy.html" />
+    <Content Include="Content\assets\Products\W\Details\7328_Bear_Electric_Lunch_Box_2L_DfhB20J1.html" />
+    <Content Include="Content\assets\Products\W\Details\7329_Beurer_Kitchen_Scale_Ks19.html" />
+    <Content Include="Content\assets\Products\W\Details\7333_Cosmo_Pan_48LAssorted_Color.html" />
+    <Content Include="Content\assets\Products\W\Details\7335_Delonghi_Coffee_Grinder_Kg200.html" />
+    <Content Include="Content\assets\Products\W\Details\7337_Elba_Juice_Extractor_EjeM0544Ss.html" />
+    <Content Include="Content\assets\Products\W\Details\7338_Elba_Pressure_Cooker_4L_EpcN4062Bl.html" />
+    <Content Include="Content\assets\Products\W\Details\7339_Faber_Slow_Cooker_Fsc_500Bk.html" />
+    <Content Include="Content\assets\Products\W\Details\7340_Hanabishi_Portable_Juicer_Ha3138BAssorted_Col.html" />
+    <Content Include="Content\assets\Products\W\Details\7341_Kenwood_Easy_Chop_Chp61100Wh.html" />
+    <Content Include="Content\assets\Products\W\Details\7342_La_Gourmet_Healthy_Retro_Juice_Blender__Assor.html" />
+    <Content Include="Content\assets\Products\W\Details\7343_La_Gourmet_Pac2Go_1650Ml_2_Tier_Tiffin_Carrie.html" />
+    <Content Include="Content\assets\Products\W\Details\7344_La_Gourmet_Ritz_12L_Thermal_BottleAssorted_Co.html" />
+    <Content Include="Content\assets\Products\W\Details\7345_La_Gourmet_Salad_Spinner_Lgmac370488.html" />
+    <Content Include="Content\assets\Products\W\Details\7346_La_Gourmet_Small_Pull_Cord_Chopper_Lgmac37045.html" />
+    <Content Include="Content\assets\Products\W\Details\7347_Locknlock_Round_Container_Set_Inl203S6.html" />
+    <Content Include="Content\assets\Products\W\Details\7348_Oster_Mybrew_Personal_Coffee_Maker_BvstmybPk.html" />
+    <Content Include="Content\assets\Products\W\Details\7349_Pensonic_World_Kitchen_Smart_Pot_WkEs.html" />
+    <Content Include="Content\assets\Products\W\Details\7350_Pyrex_2L_Casserole_With_Lid_Sakura_PxCas2000L.html" />
+    <Content Include="Content\assets\Products\W\Details\7352_Shogun_Kyoto_28_X_58Cm_Nonstick_Deep_Fry_Pan_.html" />
+    <Content Include="Content\assets\Products\W\Details\7353_Sureveil_Blender_Bottle_Tritan__Assorted_Colo.html" />
+    <Content Include="Content\assets\Products\W\Details\7356_Tefal_Safe_Tea_Kettle_17L_Ko2608.html" />
+    <Content Include="Content\assets\Products\W\Details\7357_Thermos_500Ml_Outdoor_Mug_With_Strainer_Tcmf5.html" />
+    <Content Include="Content\assets\Products\W\Details\7359_Thermos_600Ml_Vacuum_Insulated_Mug_Jdk600S1.html" />
+    <Content Include="Content\assets\Products\W\Details\7360_Zwilling_36815019_Fresh__Save_Vacuum_Starter_.html" />
+    <Content Include="Content\assets\Products\W\Details\7362_Awei_Wireless_Bluetooth_Stereo_Headphone_A710.html" />
+    <Content Include="Content\assets\Products\W\Details\7363_Dmes_De2_Plus_Earbuds.html" />
+    <Content Include="Content\assets\Products\W\Details\7364_Instax_Sq1_Classic_Kit.html" />
+    <Content Include="Content\assets\Products\W\Details\7365_Ldnio_Wall_Charger_Sc2311.html" />
+    <Content Include="Content\assets\Products\W\Details\7366_Leadshine_Wireless_Charging_Pad_Lds103.html" />
+    <Content Include="Content\assets\Products\W\Details\7367_Oraimo_Car_Charging_With_Bluetooth_Occ32D.html" />
+    <Content Include="Content\assets\Products\W\Details\7370_SONICGEAR_EARPUMP_TWS_16_ANC_NOISE_CANCELLATI.html" />
+    <Content Include="Content\assets\Products\W\Details\7374_Beoka_Super_Mini_Q1_TravelFit_Massage_GunAsso.html" />
+    <Content Include="Content\assets\Products\W\Details\7375_Beurer_Heating_Pad_Hk123_Xxl_Limited_Edition.html" />
+    <Content Include="Content\assets\Products\W\Details\7376_Elba_18002000W_Hair_Dryer_EhdG2037Bk.html" />
+    <Content Include="Content\assets\Products\W\Details\7377_Hetch_M2_Smart_Body_Fats_Scale_Bfs1124Hc.html" />
+    <Content Include="Content\assets\Products\W\Details\7378_Marshall_Jack_Rack_Ii_Key_Holder_Classic_MjrC.html" />
+    <Content Include="Content\assets\Products\W\Details\7379_Disney_Princess_Alarm_Clock___Pstc202.html" />
+    <Content Include="Content\assets\Products\W\Details\7380_Hello_Kitty_Digital_Watch_Hksq301901B.html" />
+    <Content Include="Content\assets\Products\W\Details\7381_Mickey_Mouse_Watch_Msfr231.html" />
+    <Content Include="Content\assets\Products\W\Details\7382_Transformers_Analogue_Digital_Watch________Tf.html" />
+    <Content Include="Content\assets\Products\W\Details\7384_Barry_Smith_20_Hardcase__B1052009Assorted_Col.html" />
+    <Content Include="Content\assets\Products\W\Details\7385_Leadshine_Foldable_Sling_Bag_Lds1005.html" />
+    <Content Include="Content\assets\Products\W\Details\7386_Leadshine_Travel_Organizer_Set_Lds_600.html" />
+    <Content Include="Content\assets\Products\W\Details\7388_Targus_Tech_Accessory_Pouch_Black_Txz028Gl.html" />
+    <Content Include="Content\assets\Products\W\Details\7389_Travel_Time_20_Duffle_Bag_With_Trolley_Tt14T8.html" />
+    <Content Include="Content\assets\Products\W\Details\7390_Barry_Smith_Digital_Luggage_Scale_Bsqh00801.html" />
+    <Content Include="Content\assets\Products\W\Details\7392_Tautoko_Baby_Carrier.html" />
+    <Content Include="Content\assets\Products\W\Details\7393_Hello_Kitty_Square_Lunch_Box_7033238398.html" />
+    <Content Include="Content\assets\Products\W\Details\7396_Spiderman_12_Backpack_8622227917.html" />
+    <Content Include="Content\assets\Products\W\Details\7397_FaberCastell_9000_Art_Set_Of_12_In_Slim_Flexi.html" />
+    <Content Include="Content\assets\Products\W\Details\7398_FaberCastell_Classic_Colour_Pencils_In_Slim_F.html" />
+    <Content Include="Content\assets\Products\W\Details\7399_FaberCastell_Poster_Colour_Of_18_17_10_18__So.html" />
+    <Content Include="Content\assets\Products\W\Details\7401_Barry_Smith_Flatback_Neck_Pillow_1200093.html" />
+    <Content Include="Content\assets\Products\W\Details\7500_Dreamshop_Collection_Kitchen_Rattan_Placemat_.html" />
+    <Content Include="Content\assets\Products\W\Details\7501_Dreamshop_Collection_Kitchen_Rattan_Placemat_.html" />
+    <Content Include="Content\assets\Products\W\Details\7505_Dreamshop_Collection_Mug_Gift_Set_Blue_Uc6.html" />
+    <Content Include="Content\assets\Products\W\Details\7506_Dreamshop_Collection_Men_Wallet__Belt_Gift_Se.html" />
+    <Content Include="Content\assets\Products\W\Details\7507_Dreamshop_Collection_Unicorn_Flower_Round_Bea.html" />
+    <Content Include="Content\assets\Products\W\Details\7509_Dreamshop_Collection_Skincare_Storage_Box__As.html" />
+    <Content Include="Content\assets\Products\W\Details\7515_REMAX_USINO_PRO_SERIES_MAGNETIC_WIRELESS_CHAN.html" />
+    <Content Include="Content\assets\Products\W\Details\7516_SHEAFFER_100_GLOSSY_BLACK_WITH_CHROME_TRIMS_R.html" />
+    <Content Include="Content\assets\Products\W\Details\7534_Mobicool_Cooler_Bag_S_28__Orange.html" />
+    <Content Include="Content\assets\Products\W\Details\7538_Ogawa_Irelieve_Smart_Massage_Cushion_Oz_0919_.html" />
+    <Content Include="Content\assets\Products\W\Details\7539_Ogawa_Buzzy_Handheld_Massager_Og_1100L__Silve.html" />
+    <Content Include="Content\assets\Products\W\Details\7540_Ogawa_TinkleX_Music_Vibration_Massage_Pillow_.html" />
+    <Content Include="Content\assets\Products\W\Details\7541_Ogawa_Turborevive_Hot__Cold_Portable_Massage_.html" />
+    <Content Include="Content\assets\Products\W\Details\7542_Ogawa_Mobile_Seat_Xe_Ii__Honey_Caramel_Oz_100.html" />
+    <Content Include="Content\assets\Products\W\Details\7543_Ogawa_Habo_By_Ogawa_Stylex_3In1_MenS_Trimmer_.html" />
+    <Content Include="Content\assets\Products\W\Details\7548_Keepcup_Brew_Cork_12Oz__Assorted_Color.html" />
+    <Content Include="Content\assets\Products\W\Details\7549_Keepcup_Brew_Cork_16Oz__Assorted_Color.html" />
+    <Content Include="Content\assets\Products\W\Details\7550_Dcor_Vent__Seal_Glass_Round_750Ml_227105004.html" />
+    <Content Include="Content\assets\Products\W\Details\7551_Dcor__Vent__Seal_Glass_Round_15L_227205002.html" />
+    <Content Include="Content\assets\Products\W\Details\7603_ButterCup_Hot_Spot_Heat_Pad.html" />
+    <Content Include="Content\assets\Products\W\Details\7604_ButterCup_Menstrual_Cup_Combo__Pink_L.html" />
+    <Content Include="Content\assets\Products\W\Details\7605_ButterCup_Menstrual_Cup_Combo__Purple_M.html" />
+    <Content Include="Content\assets\Products\W\Details\7663_1600_My_Lotuss_Points.html" />
+    <Content Include="Content\assets\Products\W\Details\7679_Dcor_Glass_Clips_Split_Oblong_980Ml_254400006.html" />
+    <Content Include="Content\assets\Products\W\Details\7681_Neoflam_Inox_Aluminium_Grill_Pan_28cm.html" />
+    <Content Include="Content\assets\Products\W\Details\7682_Neoflam_Inox_Aluminium_Frypan_26cm.html" />
+    <Content Include="Content\assets\Products\W\Details\7683_Neoflam_Inox_Aluminium_Wok_with_Lid_28cm.html" />
+    <Content Include="Content\assets\Products\W\Details\7685_Soundteoh_35_Pieces_Handy_Tool_Kit_AN901.html" />
+    <Content Include="Content\assets\Products\W\Details\7686_Hetch_J1_Juice_Extractor_Jet1611Hc.html" />
+    <Content Include="Content\assets\Products\W\Details\7687_Dmes_De9_Wireless_Earbuds__Black.html" />
+    <Content Include="Content\assets\Products\W\Details\7689_Zebra_06L_Vacuum_Food_Jar_Wisdom_Ii_Z152X409X.html" />
+    <Content Include="Content\assets\Products\W\Details\7690_Zebra_12X3Cm_Food_Carrier_Smart_Lock_Iii_Z150.html" />
+    <Content Include="Content\assets\Products\W\Details\7691_Dmes_De5_Plus_Wireless_Earbuds__Black_.html" />
+    <Content Include="Content\assets\Products\W\Details\7693_ZEBRA_058LT_VACUUM_CUP_POLAR_Z112X701X000__AS.html" />
+    <Content Include="Content\assets\Products\W\Details\7696_Dmes_DE10_Wireless_Earbuds__Black.html" />
+    <Content Include="Content\assets\Products\W\Details\7697_HETCH_R1_Smart_Low_Sugar_Rice_Cooker_MTC1725H.html" />
+    <Content Include="Content\assets\Products\W\Details\7698_Barry_Smith_Sling_Bag__BLACK_B63901.html" />
+    <Content Include="Content\assets\Products\W\Details\7701_HAPE_Tote_Bag.html" />
+    <Content Include="Content\assets\Products\W\Details\7703_YZ_Tea_House__Goddess_Beauty_Tea.html" />
+    <Content Include="Content\assets\Products\W\Details\7704_YZ_Tea_House__Goodnight_Tea.html" />
+    <Content Include="Content\assets\Products\W\Details\7706_J5Create_USB_HD_Webcam_with_360_Rotation_JVCU.html" />
+    <Content Include="Content\assets\Products\W\Details\7708_KTJ_Kopitiam_Series_KopiO_Pouch.html" />
+    <Content Include="Content\assets\Products\W\Details\7710_Riversong_Lotus_08_45W_Fast_Charging_Cable.html" />
+    <Content Include="Content\assets\Products\W\Details\7713_TOTACHI_Sport_4T_10W30_1L.html" />
+    <Content Include="Content\assets\Products\W\Details\7714_TOTACHI_Dento_Pawa_4T_10W40_1L.html" />
+    <Content Include="Content\assets\Products\W\Details\7715_Logitech_Silent_Plus_Wireless_Mouse_M330.html" />
+    <Content Include="Content\assets\Products\W\Details\7716_Logitech_Wireless_Keyboard_amp_Mouse_Combo_MK.html" />
+    <Content Include="Content\assets\Products\W\Details\7717_Logitech_Wireless_Mouse_M186.html" />
+    <Content Include="Content\assets\Products\W\Details\7718_ROCK_Space_Super_Self_Healing_HD_Clear_Screen.html" />
+    <Content Include="Content\assets\Products\W\Details\7719_ROCK_Doraemon_Occupation_series_Doll_Night_Li.html" />
+    <Content Include="Content\assets\Products\W\Details\7720_ROCK_Doraemon_Aroma_Keychain__Bunny.html" />
+    <Content Include="Content\assets\Products\W\Details\7721_Locaupin_Double_Zipper_Food_Storage_Bags__Siz.html" />
+    <Content Include="Content\assets\Products\W\Details\7722_THERATIS_by_Mixim_Night_Repair_Shampoo_435ml.html" />
+    <Content Include="Content\assets\Products\W\Details\7723_FUN_AZUM_Moist_Damage_amp_Repair_Shampoo_450m.html" />
+    <Content Include="Content\assets\Products\W\Details\7726_Golden_Jaguar_Bracelet_Bulu.html" />
+    <Content Include="Content\assets\Products\W\Details\7729_MamaVege_Soy_Protein_Meat__Spicy_Bbq.html" />
+    <Content Include="Content\assets\Products\W\Details\7730_Samyang_Buldak_Quattro_Cheese.html" />
+    <Content Include="Content\assets\Products\W\Details\7731_Reflex_Cat_Food_Choosy_With_Salmon.html" />
+    <Content Include="Content\assets\Products\W\Details\7732_AHALO_BUTTER_Moist_amp_Repair_Hair_Mask_200g.html" />
+    <Content Include="Content\assets\Products\W\Details\7734_Modos_Hair_Tonic_For_Reduce_Hair_Loss_100ml.html" />
+    <Content Include="Content\assets\Products\W\Details\7739_Mimone_CoQ10_Hydro_Essence_Melting_Gel_Mask.html" />
+    <Content Include="Content\assets\Products\W\Details\7740_Mimone_Miroma_Body_Oil_100ml.html" />
+    <Content Include="Content\assets\Products\W\Details\7741_Mimone_Refresher_Foam_Cleanser_100ml.html" />
+    <Content Include="Content\assets\Products\W\Details\7742_Locaupin_Stackable_Refrigerator_Organizer_wit.html" />
+    <Content Include="Content\assets\Products\W\Details\7743_Soon_Thye_Hang_Chicken_Essence_American_Ginse.html" />
+    <Content Include="Content\assets\Products\W\Details\7744_Soon_Thye_Hang_Braised_Abalone_DW80_5s_x_2_ca.html" />
+    <Content Include="Content\assets\Products\W\Details\7745_Daijobu_OKOK_Anti_Hangover_amp_Liver_Protecti.html" />
+    <Content Include="Content\assets\Products\W\Details\7746_Neoflam_FIKA_Titanium_Reinforced_Stainless_St.html" />
+    <Content Include="Content\assets\Products\W\Details\7747_Neoflam_FIKA_Titanium_Reinforced_Stainless_St.html" />
+    <Content Include="Content\assets\Products\W\Details\7748_Neoflam_FIKA_Titanium_Reinforced_Stainless_St.html" />
+    <Content Include="Content\assets\Products\W\Details\7749_newB_Premium_Ageless_Amino_Acid_Cleanser_100g.html" />
+    <Content Include="Content\assets\Products\W\Details\7750_newB_Premium_Ageless_Toning_Lotion_150ml.html" />
+    <Content Include="Content\assets\Products\W\Details\7751_newB_Premium_Ageless_Concentrate_30ml.aspx" />
+    <Content Include="Content\assets\Products\W\Details\7752_newB_Premium_Ageless_Eye_Concentrate_15g.html" />
+    <Content Include="Content\assets\Products\W\Details\7753_newB_Premium_Ageless_Day_Gel_Cream_50ml.html" />
+    <Content Include="Content\assets\Products\W\Details\7754_newB_Premium_Ageless_Night_Cream_50ml.html" />
+    <Content Include="Content\assets\Products\W\Details\7755_Trifama_Sacha_Inchi_Oil__Vitamin_E.html" />
+    <Content Include="Content\assets\Products\W\Details\7756_Trifama_Vita_C__500_Plus.html" />
+    <Content Include="Content\assets\Products\W\Details\7757_Pureglo_Deep_Sea_Collagen_Peptides.html" />
+    <Content Include="Content\assets\Products\W\Details\7758_Pureglo_Bright_28g_x_28.html" />
+    <Content Include="Content\assets\Products\W\Details\7761_Mulberry_5D_Skincare_Combo.html" />
+    <Content Include="Content\assets\Products\W\Details\7762_Rootree_Mulberry_5D_Pore_Lifting_Cream_50g.html" />
+    <Content Include="Content\assets\Products\W\Details\7763_VizionGuard_Eye_Superfood.html" />
+    <Content Include="Content\assets\Products\W\Details\7764_Rootree_Mulberry_5D_Pore_Refining_Ampoule.html" />
+    <Content Include="Content\assets\Products\W\Details\7765_Rootree_Mulberry_5D_Pore_Tightening_Clay_Mask.html" />
+    <Content Include="Content\assets\Products\W\Details\7781_SAMEL_FGD_363_Japanese_Concept_Expandable_Ant.html" />
+    <Content Include="Content\assets\Products\W\Details\7799_Credo_2in1_Foldable_15W_Wireless_Fast_Chargin.html" />
+    <Content Include="Content\assets\Products\W\Details\7800_Credo_Portable_Air_Humidifier_with_Colorful_L.html" />
+    <Content Include="Content\assets\Products\W\Details\7801_REMAX_Cozypods_W30N_NoiseCancelling_True_Wire.html" />
+    <Content Include="Content\assets\Products\W\Details\7802_Peacock_TWIST_CAP_TUMBLER_210ML_AKB21__ASSORT.html" />
+    <Content Include="Content\assets\Products\W\Details\7803_Sistema_12L_Lunch_Plus_TO_GO_with_Fork__Knife.html" />
+    <Content Include="Content\assets\Products\W\Details\7804_Tupperware_Speedy_Mando_Slicer__Assorted_Colo.html" />
+    <Content Include="Content\assets\Products\W\Details\7805_Gaabor_Wet_and_Dry_Steamer_Garment_HMM01__GRE.html" />
+    <Content Include="Content\assets\Products\W\Details\7817_Pyrex_Easy_Vent_6pcs_Rectangle_Set_PX3EV361RC.html" />
+    <Content Include="Content\assets\Products\W\Details\7818_Pyrex_17L_Oblong_Bakeware__Silver_Crown_PXREC.html" />
+    <Content Include="Content\assets\Products\W\Details\7819_Greenpan_Greenchef_24cm_49L_Casserole_GPNGNCF.html" />
+    <Content Include="Content\assets\Products\W\Details\7820_Gaabor_Air_Fryer_AF65TBK01A__BLACK.html" />
+    <Content Include="Content\assets\Products\W\Details\7824_LEADSHINE_Hair_Dryer_LDS399.html" />
+    <Content Include="Content\assets\Products\W\Details\7825_Tupperware_Steam_It__Assorted_color_11122645.html" />
+    <Content Include="Content\assets\Products\W\Details\7826_POPOLO_FAN__ASSORTED_COLOR.html" />
+    <Content Include="Content\assets\Products\W\Details\7829_Colour_Handle_Mouvelous_Cutlery_Set_24pcs__Pa.html" />
+    <Content Include="Content\assets\Products\W\Details\7830_Barry_Smith_Foldable_Travel_Duffle_Bag_B10012.html" />
+    <Content Include="Content\assets\Products\W\Details\7831_ZEBRA_22X22CM_STOCK_POT_With_LADLE__Z171X061X.html" />
+    <Content Include="Content\assets\Products\W\Details\7832_Gaabor_Hair_Dryer_HDM01A__ASSORTED_COLOR.html" />
+    <Content Include="Content\assets\Products\W\Details\7835_REMAX_ANC_Wireless_Headphone_RB900HB__ASSORTE.html" />
+    <Content Include="Content\assets\Products\W\Details\7836_Peacock_PPA50_TRITAN_CLEAR_BOTTLE_500_ML__ASS.html" />
+    <Content Include="Content\assets\Products\W\Details\7837_Sistema_18L_Lunchstack_TO_GO_Rectangle_STM217.html" />
+    <Content Include="Content\assets\Products\W\Details\7838_MAXSUN_LATTE_MINI_STOVE__ASSORTED_COLOR.html" />
+    <Content Include="Content\assets\Products\W\Details\7841_Fora_Blood_Glucose_Monitoring_System_6_Plus__.html" />
+    <Content Include="Content\assets\Products\W\Details\7847_700_PLUSMiles_Points.html" />
+    <Content Include="Content\assets\Products\W\PointsExchange\page_1.html" />
+    <Content Include="Content\assets\Products\W\Vouchers\page_1.html" />
+    <Content Include="Content\assets\Scripts\aos.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.core.min.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.filter-toggle-bundle.min.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.history-bundle.min.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.jquery-ui-bundle.min.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.jquery-ui.min.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.sort-bundle.min.js" />
+    <Content Include="Content\assets\Scripts\jplist\js\jplist.textbox-filter.min.js" />
+    <Content Include="Content\assets\Scripts\jquery.hammer.min.js" />
+    <Content Include="Content\assets\Scripts\jquery.magnific-popup.js" />
+    <Content Include="Content\assets\Scripts\jquery.min.1.11.1.js" />
+    <Content Include="Content\assets\Scripts\navigation.js" />
+    <Content Include="Content\assets\Scripts\owlcarousel\owl.carousel.js" />
+    <Content Include="Content\assets\Scripts\owlcarousel\owl.rows.js" />
+    <Content Include="Content\assets\Scripts\product-filter.js" />
+    <Content Include="Content\assets\Scripts\royalslider\jquery.royalslider.min.js" />
+    <Content Include="Content\assets\Scripts\script.js" />
+    <Content Include="Content\assets\Scripts\xzoom.min.js" />
+    <Content Include="Content\assets\Scripts\xzoom.setup.js" />
+    <Content Include="Content\assets\Styles\aos.css" />
+    <Content Include="Content\assets\Styles\dropp.css" />
+    <Content Include="Content\assets\Styles\images\btn-next.png" />
+    <Content Include="Content\assets\Styles\images\btn-prev.png" />
+    <Content Include="Content\assets\Styles\images\icon-member-blk.png" />
+    <Content Include="Content\assets\Styles\images\icon-member.png" />
+    <Content Include="Content\assets\Styles\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Content\assets\Styles\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Content\assets\Styles\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Content\assets\Styles\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Content\assets\Styles\images\ico\favicon.png" />
+    <Content Include="Content\assets\Styles\jplist\css\jplist.core.min.css" />
+    <Content Include="Content\assets\Styles\jplist\css\jplist.filter-toggle-bundle.min.css" />
+    <Content Include="Content\assets\Styles\jplist\css\jplist.jquery-ui-bundle.min.css" />
+    <Content Include="Content\assets\Styles\jplist\css\jplist.jquery-ui.css" />
+    <Content Include="Content\assets\Styles\jplist\css\jplist.textbox-filter.min.css" />
+    <Content Include="Content\assets\Styles\jquery.nstSlider.css" />
+    <Content Include="Content\assets\Styles\magnific-popup.css" />
+    <Content Include="Content\assets\Styles\navigation.css" />
+    <Content Include="Content\assets\Styles\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Content\assets\Styles\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Content\assets\Styles\responsive.css" />
+    <Content Include="Content\assets\Styles\royalslider\royalslider.css" />
+    <Content Include="Content\assets\Styles\royalslider\skins\minimal-white\rs-minimal-white.css" />
+    <Content Include="Content\assets\Styles\simplegrid.css" />
+    <Content Include="Content\assets\Styles\style-custom.css" />
+    <Content Include="Content\assets\Styles\style.css" />
+    <Content Include="Content\assets\Styles\xzoom.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Scripts\aos.js" />
+    <Content Include="Content\Scripts\jquery-migrate-1.2.1.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.9.1.min.js" />
+    <Content Include="Content\Scripts\jquery.autocomplete.js" />
+    <Content Include="Content\Scripts\jquery.datetimepicker.js" />
+    <Content Include="Content\Scripts\jquery.marquee.js" />
+    <Content Include="Content\Scripts\jquery.min.1.9.1.js" />
+    <Content Include="Content\Scripts\jquery.remodal.js" />
+    <Content Include="Content\Scripts\JScript.js" />
+    <Content Include="Content\Scripts\lightcase\lightcase.css" />
+    <Content Include="Content\Scripts\lightcase\lightcase.init.js" />
+    <Content Include="Content\Scripts\lightcase\lightcase.js" />
+    <Content Include="Content\Scripts\lightcase\webplate.js" />
+    <Content Include="Content\Scripts\modernizr-2.7.2.js" />
+    <Content Include="Content\Scripts\navigation.js" />
+    <Content Include="Content\Scripts\owlcarousel1\owl.carousel.js" />
+    <Content Include="Content\Scripts\owlcarousel1\owl.rows.js" />
+    <Content Include="Content\Scripts\royalslider\jquery.royalslider.min.js" />
+    <Content Include="Content\Scripts\royalslider\royalslider.css" />
+    <Content Include="Content\Scripts\royalslider\skins\minimal-white\rs-minimal-white.css" />
+    <Content Include="Content\Scripts\script.js" />
+    <Content Include="Content\Scripts\tooltips.js" />
+    <Content Include="Content\Styles\aos.css" />
+    <Content Include="Content\Styles\form.css" />
+    <Content Include="Content\Styles\form2.css" />
+    <Content Include="Content\Styles\jquery.autocomplete.css" />
+    <Content Include="Content\Styles\jquery.datetimepicker.css" />
+    <Content Include="Content\Styles\jquery.remodal.css" />
+    <Content Include="Content\Styles\navigation.css" />
+    <Content Include="Content\Styles\owlcarousel1\assets\owl.carousel.css" />
+    <Content Include="Content\Styles\owlcarousel1\assets\owl.theme.default.css" />
+    <Content Include="Content\Styles\responsive.css" />
+    <Content Include="Content\Styles\simplegrid.css" />
+    <Content Include="Content\Styles\Site.css" />
+    <Content Include="Content\Styles\slider.css" />
+    <Content Include="Content\Styles\style.css" />
+    <Content Include="Content\Styles\tooltips.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\MemberLogin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57826</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
